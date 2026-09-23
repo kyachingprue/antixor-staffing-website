@@ -3,6 +3,7 @@ import { FaFacebookF, FaLinkedinIn, FaXTwitter, FaYoutube } from 'react-icons/fa
 import { PiBriefcaseFill } from 'react-icons/pi'
 import { MapPin, Phone, Mail } from 'lucide-react'
 import Button from './Button.jsx'
+import logo from "../assets/antixor.png"
 
 const quickLinks = [
   { label: 'Home', to: '/' },
@@ -31,9 +32,7 @@ export default function Footer() {
       <div className="container-px py-16 grid gap-12 md:grid-cols-2 lg:grid-cols-[1.3fr_1fr_1fr_1.2fr]">
         <div>
           <Link to="/" className="flex items-center gap-2.5">
-            <span className="grid place-items-center h-10 w-10 rounded-xl bg-gold-500 text-navy-950">
-              <PiBriefcaseFill size={20} />
-            </span>
+            <img src={logo} className='w-6 md:w-12' alt="Antixor Staffing website logo" />
             <span className="leading-tight">
               <span className="block font-display font-bold text-lg text-white">Antixor</span>
               <span className="block text-[11px] font-medium tracking-[0.2em] text-white/50 uppercase -mt-0.5">

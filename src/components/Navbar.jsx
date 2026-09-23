@@ -4,6 +4,7 @@ import { AnimatePresence, motion } from 'motion/react'
 import { Menu, X, ArrowUpRight } from 'lucide-react'
 import { PiBriefcaseFill } from 'react-icons/pi'
 import Button from './Button.jsx'
+import logo from "../assets/antixor.png"
 
 const NAV_LINKS = [
   { label: 'Home', to: '/' },
@@ -47,9 +48,9 @@ export default function Navbar() {
     setOpen(false)
   }, [location.pathname])
 
-  /* ------------------------------------------
-     Lock background scrolling
-  ------------------------------------------ */
+
+  // Lock background scrolling
+
   useEffect(() => {
     if (!open) {
       document.body.style.overflow = ''
@@ -86,9 +87,6 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ==================================================
-          NAVBAR
-      ================================================== */}
       <header
         className={`
           sticky top-0 z-[100]
@@ -103,9 +101,7 @@ export default function Navbar() {
         <nav className="container-px flex items-center justify-between h-[76px]">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2.5 shrink-0">
-            <span className="grid place-items-center h-10 w-10 rounded-xl bg-navy-900 text-gold-400">
-              <PiBriefcaseFill size={20} />
-            </span>
+            <img src={logo} className='w-6 md:w-12' alt="Antixor Staffing website logo" />
 
             <span className="leading-tight">
               <span className="block font-display font-bold text-lg text-navy-950 tracking-tight">
